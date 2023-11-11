@@ -50,6 +50,30 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "hr-payroll",
+					"item": [
+						{
+							"name": "Payment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hr-payroll}}/2/days/100",
+									"host": [
+										"{{hr-payroll}}"
+									],
+									"path": [
+										"2",
+										"days",
+										"100"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		}
