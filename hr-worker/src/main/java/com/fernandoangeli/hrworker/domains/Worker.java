@@ -1,4 +1,4 @@
-package com.fernandoangeli.mscourse.domains;
+package com.fernandoangeli.hrworker.domains;
 
 import lombok.*;
 

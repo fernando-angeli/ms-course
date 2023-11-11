@@ -1,6 +1,6 @@
-package com.fernandoangeli.mscourse.repositories;
+package com.fernandoangeli.hrworker.repositories;
 
-import com.fernandoangeli.mscourse.domains.Worker;
+import com.fernandoangeli.hrworker.domains.Worker;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface WorkerRepository extends JpaRepository<Worker, Long> {

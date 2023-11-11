@@ -1,7 +1,7 @@
-package com.fernandoangeli.mscourse.controllers;
+package com.fernandoangeli.hrworker.controllers;
 
-import com.fernandoangeli.mscourse.domains.Worker;
-import com.fernandoangeli.mscourse.repositories.WorkerRepository;
+import com.fernandoangeli.hrworker.domains.Worker;
+import com.fernandoangeli.hrworker.repositories.WorkerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
