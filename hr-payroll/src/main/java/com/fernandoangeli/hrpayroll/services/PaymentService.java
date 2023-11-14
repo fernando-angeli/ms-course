@@ -14,17 +14,6 @@ import java.util.Map;
 @Service
 public class PaymentService {
 
-
-    /*
-    @Value("${hr-worker.host}")
-    private String workerHost;
-
-    @Autowired
-    private RestTemplate restTemplate;
-
-    O RestTemplate será substituido pelo FeignClient
-     */
-
     @Autowired
     private WorkerFeignClient workerFeignClient;
 
