@@ -13,7 +13,7 @@
 					"name": "hr-worker",
 					"item": [
 						{
-							"name": "FindAll",
+							"name": "All workers",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -30,17 +30,15 @@
 							"response": []
 						},
 						{
-							"name": "FindById",
+							"name": "Worker by id",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8001/workers/1",
-									"protocol": "http",
+									"raw": "{{hr-worker}}/workers/1",
 									"host": [
-										"localhost"
+										"{{hr-worker}}"
 									],
-									"port": "8001",
 									"path": [
 										"workers",
 										"1"
@@ -60,14 +58,88 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{hr-payroll}}/2/days/100",
+									"raw": "{{hr-payroll}}/payments/1/days/100",
 									"host": [
 										"{{hr-payroll}}"
 									],
 									"path": [
-										"2",
+										"payments",
+										"1",
 										"days",
 										"100"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Fase 2",
+			"item": [
+				{
+					"name": "hr-worker",
+					"item": [
+						{
+							"name": "All workers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{zuul}}/hr-worker/workers",
+									"host": [
+										"{{zuul}}"
+									],
+									"path": [
+										"hr-worker",
+										"workers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Worker by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{zuul}}/hr-worker/workers/1",
+									"host": [
+										"{{zuul}}"
+									],
+									"path": [
+										"hr-worker",
+										"workers",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "hr-payroll",
+					"item": [
+						{
+							"name": "Payment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{zuul}}/hr-payroll/payments/1/days/11",
+									"host": [
+										"{{zuul}}"
+									],
+									"path": [
+										"hr-payroll",
+										"payments",
+										"1",
+										"days",
+										"11"
 									]
 								}
 							},
