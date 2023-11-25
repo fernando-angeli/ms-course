@@ -3,10 +3,13 @@ package com.fernandoangeli.hruser.domains;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "tb_role")
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Role {
