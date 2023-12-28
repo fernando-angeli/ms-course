@@ -23,8 +23,8 @@ public class WorkerController {
 
     private static Logger logger = LoggerFactory.getLogger(WorkerController.class);
 
-    @Value("${test.config}")
-    private String testConfig;
+//    @Value("${test.config}")
+//    private String testConfig;
 
     @Autowired
     private Environment env;
@@ -55,10 +55,10 @@ public class WorkerController {
         return ResponseEntity.ok().body(worker);
     }
 
-    @GetMapping("/configs")
-    public ResponseEntity<String> getConfigs(){
-        logger.info("CONFIG = " + testConfig);
-        return ResponseEntity.ok("CONFIG = " + testConfig);
-    }
+//    @GetMapping("/configs")
+//    public ResponseEntity<String> getConfigs(){
+//        logger.info("CONFIG = " + testConfig);
+//        return ResponseEntity.ok("CONFIG = " + testConfig);
+//    }
 
 }
